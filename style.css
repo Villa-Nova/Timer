@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --base-color: 194;
+  
+  --bg-color: hsl(240, 5%, 7%);
+  --bg-primary-light: hsla(var(--base-color), 100%, 63%, 0.13);
+  --primary-color: hsl(var(--base-color), 100%, 63%);
+  
+  --text-color: hsl(0, 0%, 100%);
+}
+
+.hide {
+  display: none;
+}
+
+button svg {
+  width: clamp(3.2rem, 2rem + 12vw, 6.4rem);
+}
+
+body {
+  font-size: 1.6rem;
+
+  background: var(--bg-color);
+
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+
+  min-height: 100vh;
+  display: grid;
+}
+
+main {
+  justify-self: center;
+  align-self: end;
+}
+
+.box {
+  display: grid;
+}
+
+
+#timer {
+  font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
+
+  display: flex;
+  gap: 0;
+
+  margin-bottom: 1.6rem;
+
+  justify-self: center;
+}
+
+#controls {
+  background-color: var(--bg-primary-light);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+
+  border-radius: 99.99rem;
+  
+  width: clamp(10rem, 10rem + 30vw, 22.8rem);/* clamp(min, medio(ideal), max) */
+  /* clamp: Feita pra texto mas da pra usar pra largura e altura */
+  /* primeiro o valor min e dps o valor ideal que eu somo com a largura da pg */
+  /* Por ultimo o maximo de largura que ele vai chegar */
+
+  height: clamp(8rem, 5rem + 10vw, 9.5rem);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.play svg path,
+.pause svg path,
+.sound_on svg path {
+  fill: var(--primary-color);
+}
+
+footer {
+  justify-self: end;
+  align-self: end;
+
+  padding:  0 3.2rem 4rem 0;
+}
